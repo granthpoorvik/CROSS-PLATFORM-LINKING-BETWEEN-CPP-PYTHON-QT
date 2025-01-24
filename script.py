@@ -20,6 +20,7 @@ def The_FUN(file1,file2,threshold,trans_init,DRAW=0):
         
     processed_target, outlier_index = target.remove_radius_outlier(
                                                 nb_points=16,
+        
                                                 radius=0.5)
     reg_p2p = op.pipelines.registration.registration_icp(
     processed_source, processed_target, threshold, trans_init,
